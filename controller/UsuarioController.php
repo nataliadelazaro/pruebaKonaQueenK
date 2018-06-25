@@ -79,8 +79,6 @@ class UsuarioController extends BaseController
             $usuario->setLetra(empty($_POST["letra"]) ? "N/A" : $_POST["letra"]);
             $foto = $this->uploadFoto();
 
-            echo $usuario->getId();
-
             if ($foto == "na") {
                 $repo->update($usuario, false);
 
